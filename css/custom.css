@@ -1,0 +1,843 @@
+/* ------------------------------------------------------------------
+Project: Insee
+Place here your custom CSS styles
+------------------------------------------------------------------ */
+
+/* Updated Instagram Slider Styles */
+.insta-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.insta-item {
+    position: relative;
+    width: 100%;
+}
+
+.insta-item img {
+    width: 100%;
+    height: auto; /* Allow natural height */
+    display: block;
+    transition: transform 1s ease;
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Buttons */
+.insta-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+    pointer-events: none; /* Prevent nav container from blocking clicks */
+}
+
+.insta-carousel .owl-nav button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Re-enable clicks on buttons */
+}
+
+.insta-carousel .owl-nav button:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.insta-carousel .owl-prev {
+    left: 20px;
+}
+
+.insta-carousel .owl-next {
+    right: 20px;
+}
+
+.insta-carousel .owl-nav i {
+    color: white;
+    font-size: 24px;
+}
+
+/* Dots Navigation */
+.insta-carousel .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.insta-carousel .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.insta-carousel .owl-dot.active {
+    background: white !important;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .insta-carousel .owl-nav button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .insta-carousel .owl-nav i {
+        font-size: 20px;
+    }
+}
+
+/* Custom Navigation Arrows */
+.insta-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 110%; /* Wider than container to place arrows outside */
+    transform: translateY(-50%);
+    margin: 0;
+    left: -5%;
+}
+
+.insta-carousel .owl-nav button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease;
+}
+
+.insta-carousel .owl-nav button:hover {
+    background: #fff !important;
+    transform: scale(1.1);
+}
+
+.insta-carousel .owl-prev {
+    left: 20px;
+}
+
+.insta-carousel .owl-next {
+    right: 20px;
+}
+
+.insta-carousel .owl-nav i {
+    font-size: 24px;
+    color: #000;
+}
+
+/* Custom Dots */
+.insta-carousel .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.insta-carousel .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.insta-carousel .owl-dot.active {
+    background: #fff !important;
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .insta-item {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .insta-item {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .insta-item {
+        height: 400px;
+    }
+}
+
+/* Appointment Button Styles */
+.appointment-button-container {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.appointment-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    gap: 10px;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-button:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.appointment-button i {
+    font-size: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .appointment-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .appointment-button i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Optimize media queries */
+@media screen and (max-width: 768px) {
+    .insta-carousel {
+        contain: content;
+    }
+    
+    .appointment-button-container {
+        contain: layout style;
+    }
+}
+
+/* Performance Optimizations */
+/* Add content-visibility for better paint performance */
+.module-small,
+.quick-view-section,
+.insta-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize images with loading attribute */
+img {
+    loading: lazy;
+}
+
+/* Critical above-the-fold content */
+.navbar,
+.hero-section {
+    content-visibility: visible;
+}
+
+/* Add will-change for smoother animations */
+.quick-view-item:hover,
+.insta-item:hover {
+    will-change: transform;
+}
+
+/* Add container queries for better responsive design */
+.quick-view-grid,
+.insta-grid {
+    container-type: inline-size;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Your-Font';
+    font-display: swap;
+    src: url('/fonts/your-font.woff2') format('woff2');
+}
+
+/* Add print styles */
+@media print {
+    .quick-view-section,
+    .insta-section {
+        break-inside: avoid;
+    }
+}
+
+/* Accessibility Improvements */
+.quick-view-item a,
+.insta-item a {
+    position: relative;
+    z-index: 1;
+}
+
+.quick-view-overlay,
+.insta-overlay {
+    aria-hidden: "true";
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Quick View Section Styles */
+.quick-view-section {
+    padding: clamp(40px, 6vw, 80px) 0;
+    background: #111;
+    overflow: hidden;
+}
+
+.quick-view-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+    width: 100%;
+}
+
+.quick-view-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.quick-view-image {
+    position: relative;
+    width: 100%;
+    padding-top: 133.33%; /* 3:4 aspect ratio */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Decorative Border Pattern */
+.quick-view-item {
+    position: relative;
+    padding: 10px;
+}
+
+.quick-view-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.quick-view-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 5px;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover Effects */
+.quick-view-item:hover::before,
+.quick-view-item:hover::after {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.quick-view-item:hover .quick-view-overlay {
+    opacity: 1;
+}
+
+.quick-view-item:hover .quick-view-title,
+.quick-view-item:hover .quick-view-category {
+    transform: translateY(0);
+}
+
+.quick-view-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.quick-view-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Add blur effect only for desktop */
+@media (min-width: 992px) {
+    .quick-view-overlay {
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+    }
+}
+
+.quick-view-title {
+    color: #fff;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.quick-view-category {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(12px, 1.5vw, 14px);
+    letter-spacing: 1px;
+    margin-top: 5px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 576px) {
+    .quick-view-item::before,
+    .quick-view-item::after,
+    .quick-view-image::before,
+    .quick-view-image::after {
+        width: 8px;
+        height: 8px;
+    }
+
+    .quick-view-item::before {
+        top: 8px;
+        left: 8px;
+    }
+
+    .quick-view-item::after {
+        top: 8px;
+        right: 8px;
+    }
+
+    .quick-view-image::before {
+        bottom: 8px;
+        left: 8px;
+    }
+
+    .quick-view-image::after {
+        bottom: 8px;
+        right: 8px;
+    }
+}
+
+/* Section Title */
+.quick-view-section .section-title {
+    text-align: center;
+    margin-bottom: clamp(30px, 4vw, 40px);
+    padding: 0 15px;
+}
+
+.quick-view-section .section-title h2 {
+    color: #fff;
+    font-size: clamp(24px, 3vw, 28px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: clamp(12px, 2vw, 15px);
+    position: relative;
+    display: inline-block;
+}
+
+.quick-view-section .section-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(40px, 6vw, 60px);
+    height: 2px;
+    background: #fff;
+}
+
+/* Grid Layout Breakpoints */
+@media screen and (min-width: 1400px) {
+    .quick-view-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .quick-view-grid {
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .quick-view-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .quick-view-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .quick-view-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+        padding: 0 20px;
+        gap: 25px;
+        margin: 30px auto;
+    }
+    
+    .quick-view-image {
+        padding-top: 133.33%; /* Maintain 3:4 ratio on mobile */
+    }
+}
+
+/* Performance Optimizations */
+.quick-view-item {
+    contain: content;
+    will-change: transform;
+}
+
+.quick-view-image img {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Enhanced Instagram Grid Styles */
+.insta-section {
+    padding: 80px 0;
+    background: #111;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+.insta-item {
+    position: relative;
+    padding: 10px;
+}
+
+.insta-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.insta-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 5px;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.insta-item:hover::before,
+.insta-item:hover::after {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.insta-image {
+    position: relative;
+    width: 100%;
+    padding-top: 133.33%; /* 3:4 aspect ratio */
+    overflow: hidden;
+}
+
+.insta-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.insta-item:hover .insta-overlay {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+    .insta-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .insta-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+        padding: 0 20px;
+        gap: 25px;
+        margin: 30px auto;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .insta-overlay {
+        opacity: 1;
+        background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.9));
+    }
+}
+
+/* Price Request Button Container */
+.price-request-container {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    background: #111;
+}
+
+.price-request-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.price-request-button i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.price-request-button:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.price-request-button:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .price-request-button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    .price-request-button i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-request-container {
+        padding: 30px 0;
+    }
+    
+    .price-request-button {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
+
+/* Quick View and Instagram Grid Responsive Adjustments */
+@media screen and (max-width: 991px) {
+    .quick-view-grid,
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+
+    .quick-view-item,
+    .insta-item {
+        padding: 8px;
+    }
+
+    .quick-view-section,
+    .insta-section {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quick-view-grid,
+    .insta-grid {
+        gap: 15px;
+        padding: 0 15px;
+        margin: 25px auto;
+    }
+
+    .quick-view-item,
+    .insta-item {
+        padding: 6px;
+    }
+
+    .quick-view-overlay,
+    .insta-overlay {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .quick-view-grid,
+    .insta-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 350px;
+        gap: 25px;
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .quick-view-item,
+    .insta-item {
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+
+    .quick-view-image,
+    .insta-image {
+        padding-top: 133.33%;
+        margin: 0;
+    }
+
+    .quick-view-title {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+
+    .quick-view-category {
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    .quick-view-section,
+    .insta-section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .quick-view-item,
+    .insta-item {
+        margin-bottom: 0;
+    }
+}
+
+      
+      
